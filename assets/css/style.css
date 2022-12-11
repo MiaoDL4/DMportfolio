@@ -6,29 +6,53 @@
 body {
     background-color: #232338;
     color: white;
-    margin-left: 40px;
+    margin-left: 5%;
 }
 /* || side nav bar */
 .sidenav {
     display: block;
     position: fixed;
     height: 100%;
-    width:40px;
+    width:5%;
     z-index: 1;
     top: 0; 
     left: 0;
     background-color: #DB5660;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.sidenav a {
+
+.sidenav li{
     text-decoration: none;
     font-size: 10px;
     color: white;
     display: block;
-  }
+}
 
 
-/* || work section */
-  .justify-center {
+.work {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
-  
+}
+
+.flexsection{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flexdiv{
+    height: 100px;
+    color: white;
+    background-color: #DB5660;
+    margin: 10px;
+
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
