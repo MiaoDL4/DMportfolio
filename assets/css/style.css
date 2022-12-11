@@ -19,8 +19,13 @@ h1, h2, h3, h4{
     margin-bottom: 10px;
 }
 
+main {
+    max-width: 1000px;
+}
+
 .header{
     margin: 50px 0;
+    height: 10vh
 }
 .header a{
     padding: 0px;
@@ -53,6 +58,7 @@ h1, h2, h3, h4{
     margin: 50px 0;
     display: flex;
     align-items: center;
+    height: 50vh
 }
 .work {
     display: flex;
@@ -67,6 +73,7 @@ h1, h2, h3, h4{
     display: flex;
     align-items: center;
     margin: 50px 0;
+    height: 50vh
 }
 
 .flexsection{
@@ -76,7 +83,7 @@ h1, h2, h3, h4{
 }
 
 .flexdiv{
-    height: 100px;
+    height: 150px;
     color: white;
     background-color: #DB5660;
     margin: 10px;
@@ -104,4 +111,20 @@ h1, h2, h3, h4{
 .flexgen{
     display: flex;
     align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .sideways{
+        writing-mode: horizontal-tb;
+    }
+    .aboutme{
+        flex-direction: column;
+        height: auto;
+    }
+    .flexgen{
+        flex-direction: column;
+    }
+    .contact{
+        flex-direction: column;
+        height: auto;
+    }
 }
