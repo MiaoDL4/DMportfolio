@@ -34,17 +34,13 @@ main {
 
 /* || side nav bar */
 .sidenav {
-    display: block;
     position: fixed;
-    height: 100%;
-    width:5%;
+    height: 5%;
+    width:100%;
     z-index: 1;
     top: 0; 
     left: 0;
     background-color: #DB5660;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sidenav li{
@@ -84,8 +80,9 @@ main {
 
 .flexdiv{
     height: 150px;
-    color: white;
     background-color: #DB5660;
+    border: 5px solid #DB5660;
+    color: white;
     margin: 10px;
 
     flex: 1;
@@ -112,7 +109,27 @@ main {
     display: flex;
     align-items: center;
 }
+
+
+img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+img:hover {
+    opacity: 1.0;
+    color: #DB5660;
+  }
+
+.overlap{
+    position: absolute;
+}
+
 @media screen and (max-width: 768px) {
+    /* make titles go horzontal and on top */
     .sideways{
         writing-mode: horizontal-tb;
     }
@@ -127,4 +144,17 @@ main {
         flex-direction: column;
         height: auto;
     }
+    /* making project section stack correctly */
+    .flexsection{
+        flex-direction: column;
+    }
+    /* .work section:nth-child(1){
+        height: 150px;
+    }
+    .work section:nth-child(2){
+        height: 280px;
+    }
+    .work section:nth-child(3){
+        height: 410px;
+    } */
 }
