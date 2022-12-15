@@ -9,9 +9,10 @@ body {
     color: white;
     margin: 0 10%;
 }
+
 a{
-    color: white;
     text-decoration: none;
+    color:white;
 }
 
 h1, h2, h3, h4{
@@ -21,7 +22,28 @@ h1, h2, h3, h4{
 
 main {
     max-width: 1000px;
+    margin: auto;
+    margin-top: 150px;
 }
+button{
+    color: white;
+    background-color: #DB5660;
+    padding: 3px;
+}
+/* image color transtion */
+img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+img:hover {
+    opacity: 1.0;
+    color: #DB5660;
+  }
+
 
 .header{
     margin: 50px 0;
@@ -42,20 +64,23 @@ main {
     left: 0;
     background-color: #DB5660;
 }
-
-.sidenav li{
-    text-decoration: none;
-    font-size: 10px;
-    color: white;
-    display: block;
+.sidenav ul{
+    display: flex;
+    justify-content: center;
 }
-
+.sidenav li{
+    font-size: 25px;
+    padding: 10px;
+    display: inline;
+}
+/* Main section */
 .aboutme {
     margin: 50px 0;
     display: flex;
     align-items: center;
-    height: 50vh
+    height: 30vh
 }
+
 .work {
     display: flex;
     flex-direction: column;
@@ -64,14 +89,13 @@ main {
     width: 100%;
 }
 
-
 .contact{
     display: flex;
     align-items: center;
     margin: 50px 0;
-    height: 50vh
+    height: 30vh
 }
-
+/* flex for work section */
 .flexsection{
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +115,33 @@ main {
     justify-content: center;
     align-items: center;
 }
+.flexgen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contact section flex */
+.contactcontainterflex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.contactdiv{
+    padding: 10px;
+}
+
+
+
+/* misc classes */
+.link{
+    color: white;
+    background-color: #DB5660;
+    padding: 5px;
+    text-decoration: none;
+}
 
 .indent{
     margin-left: 10px;
@@ -105,28 +156,11 @@ main {
     border-right: 6px solid #DB5660;
 }
 
-.flexgen{
-    display: flex;
-    align-items: center;
-}
-
-
-img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity: 0.6;
-    transition: opacity 1s;
-}
-
-img:hover {
-    opacity: 1.0;
-    color: #DB5660;
-  }
 
 .overlap{
     position: absolute;
 }
+
 
 @media screen and (max-width: 768px) {
     /* make titles go horzontal and on top */
@@ -144,17 +178,15 @@ img:hover {
         flex-direction: column;
         height: auto;
     }
-    /* making project section stack correctly */
+    .flexdiv{
+        height: 150px;
+    }
     .flexsection{
         flex-direction: column;
     }
-    /* .work section:nth-child(1){
-        height: 150px;
+    .contactcontainterflex{
+        flex-direction: column;
+        justify-content: center;
+
     }
-    .work section:nth-child(2){
-        height: 280px;
-    }
-    .work section:nth-child(3){
-        height: 410px;
-    } */
 }
